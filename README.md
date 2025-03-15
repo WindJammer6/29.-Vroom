@@ -13,6 +13,8 @@ Android/iOS App development (not just with Java but can be for dart, swift, etc)
 - An important attribute that exists in all types of 'Views' is called the 'ID' attribute. Since in android app development we would often require to reference 'Views' so we can modify or work with it inside of code. And in order to do things dynamically like that, we often want to interact with these 'Views', which we can do so by stating their 'ID' attributes
 - A Fragment is a reusable UI component that represents a portion of a screen inside an Activity. Fragments allow for modular design, meaning you can break your UI into smaller, manageable pieces. Think of it like the 'Activity' → The container (full screen, while the 'Fragment' → A piece of that screen (like a section in a webpage)
 
+<br>
+
 Presentation slides to pitch the project idea:
 - https://www.canva.com/design/DAGe-dY8S3w/s84h1FwiLnhPeZOdrkp3uw/edit (Design by my groupmates not me, I am just the implementor)
 
