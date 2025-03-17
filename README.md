@@ -5,6 +5,8 @@
 
 Undirected Weighted Graph Data Structure is drawn based on eyeballing this Singapore with the towns and doing aggaration on the distances (weights), which we then applied Dijkstra's Algorithm. (rmb save a copy of this image in the repo somewhere)
 
+Distance ARE NOT ACCURATE! Its just to draft up a model to demonstrate the feature of distance sorting.
+
 
 Random personal notes on Android App Development with Java:
 Android/iOS App development (not just with Java but can be for dart, swift, etc) terminology:
