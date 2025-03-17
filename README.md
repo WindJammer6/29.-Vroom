@@ -3,7 +3,7 @@
 ![image](https://github.com/user-attachments/assets/dfb76ef9-03ca-4427-83de-e715dd060431)
 
 
-Undirected Weighted Graph Data Structure is drawn based on eyeballing this Singapore with the towns and doing aggaration on the distances (weights), which we then applied Dijkstra's Algorithm.
+Undirected Weighted Graph Data Structure is drawn based on eyeballing this Singapore with the towns and doing aggaration on the distances (weights), which we then applied Dijkstra's Algorithm. (rmb save a copy of this image in the repo somewhere)
 
 
 Random personal notes on Android App Development with Java:
