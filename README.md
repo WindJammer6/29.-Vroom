@@ -3,7 +3,12 @@
 ![image](https://github.com/user-attachments/assets/dfb76ef9-03ca-4427-83de-e715dd060431)
 
 
+![WhatsApp Image 2025-03-18 at 02 45 17_e521aa0a](https://github.com/user-attachments/assets/4fc7b7f7-4dfb-4eb6-ad54-f6a65a056e10)
+
+
 Undirected Weighted Graph Data Structure is drawn based on eyeballing this Singapore with the towns and doing aggaration on the distances (weights), which we then applied Dijkstra's Algorithm. (rmb save a copy of this image in the repo somewhere)
+
+Bottom sketch is my draft interpretation of the Undirected Weighted Graph Data Structure.
 
 Distance ARE NOT ACCURATE! Its just to draft up a model to demonstrate the feature of distance sorting.
 
