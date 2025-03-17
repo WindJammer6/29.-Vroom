@@ -1,5 +1,11 @@
 # Vroom
 
+![image](https://github.com/user-attachments/assets/dfb76ef9-03ca-4427-83de-e715dd060431)
+
+
+Undirected Weighted Graph Data Structure is drawn based on eyeballing this Singapore with the towns and doing aggaration on the distances (weights), which we then applied Dijkstra's Algorithm.
+
+
 Random personal notes on Android App Development with Java:
 Android/iOS App development (not just with Java but can be for dart, swift, etc) terminology:
 - Each button on the phone is called an app
