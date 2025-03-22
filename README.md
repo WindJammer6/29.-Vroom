@@ -40,6 +40,10 @@ Firebase Realtime Database link:
 Website links that helped me with debugging various bugs:
 - https://stackoverflow.com/questions/76018702/i-cant-create-a-new-project-with-java-language-anymore-on-android-studio-flamin
 
+How upload code from Android Studio to Github with Git: 
+- https://www.youtube.com/watch?v=VJOblwM2KJ0&t=8s
+
 Sources:
 - https://www.youtube.com/watch?v=tZvjSl9dswg ('Android App Development in Java All-in-One Tutorial Series (4 HOURS!)' Youtube video by Caleb Curry) (For learning syntax basics of Android App Development in Java in Android Studio)
 - https://www.youtube.com/watch?v=aiX8bMPX_t8&t=230s ('How to connect Firebase to Android Studio App | 2024' Youtube video by Easy Tuto) (For learning how to connect Firebase to Android Studio IDE)
+
