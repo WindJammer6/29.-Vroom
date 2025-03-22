@@ -113,7 +113,20 @@ public class SearchCalenderFragment extends Fragment {
 
     // Function to show bottom sheet dialog
     private void showTimeSelectionBottomSheet(String date) {
-        BottomSheetDialogFragment bottomSheet = new TimeSelectionBottomSheet(date);
+        Bundle dataBundle = getArguments();
+        if (dataBundle == null) {
+            dataBundle = new Bundle();
+        }
+        dataBundle.putString("selectedDate", date); // Add the selected date too
+
+        // Log all keys and values inside the bundle
+        for (String key : dataBundle.keySet()) {
+            Object value = dataBundle.get(key);
+            Log.d("BUNDLE_DEBUG", "Key: " + key + " | Value: " + String.valueOf(value));
+        }
+
+        TimeSelectionBottomSheet bottomSheet = new TimeSelectionBottomSheet(date);
+        bottomSheet.setArguments(dataBundle);
         bottomSheet.show(getParentFragmentManager(), bottomSheet.getTag());
     }
 }

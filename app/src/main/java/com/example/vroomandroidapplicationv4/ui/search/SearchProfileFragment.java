@@ -12,10 +12,17 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.vroomandroidapplicationv4.HomeActivity;
 import com.example.vroomandroidapplicationv4.R;
 import com.example.vroomandroidapplicationv4.databinding.FragmentSearchProfileBinding;
+import com.example.vroomandroidapplicationv4.ui.search.relatedtorecyclerview.CustomAdapter2;
+import com.example.vroomandroidapplicationv4.ui.search.relatedtorecyclerview.Review;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SearchProfileFragment extends Fragment {
 
@@ -28,6 +35,9 @@ public class SearchProfileFragment extends Fragment {
 
         binding = FragmentSearchProfileBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
+        List<Review> reviewList = new ArrayList<>();
+        ArrayList<String> reviewerNames = new ArrayList<String>();
 
         // Retrieve instructor data from Bundle
         Bundle bundle = getArguments();
@@ -47,6 +57,20 @@ public class SearchProfileFragment extends Fragment {
             descriptionTextView.setText(instructorDescription);
             ratingTextView.setText("⭐ " + instructorRating); // Display star symbol before rating
             profileImageView.setImageResource(instructorImage);
+
+            // 🔵 Handle the review data
+            reviewerNames = bundle.getStringArrayList("reviewer_names");
+            ArrayList<Double> ratings = (ArrayList<Double>) bundle.getSerializable("ratings");
+            ArrayList<String> reviewTexts = bundle.getStringArrayList("review_texts");
+
+            if (reviewerNames != null && ratings != null && reviewTexts != null) {
+                for (int i = 0; i < reviewerNames.size(); i++) {
+                    double rating = ratings.get(i);
+                    String reviewText = reviewTexts.get(i);
+                    String reviewerName = reviewerNames.get(i);
+                    reviewList.add(new Review(rating, reviewText)); // optional: include name inside review
+                }
+            }
         }
 
 
@@ -68,6 +92,18 @@ public class SearchProfileFragment extends Fragment {
                 }
             }
         });
+
+        // Dummy review data (You can replace this with Firebase data later)
+//        List<Review> reviewList = new ArrayList<>();
+//        reviewList.add(new Review("Jet Wei", "Very clear & patient instructor. Highly recommend!", 5.0));
+//        reviewList.add(new Review("Carlo Cenina", "Great lessons, helped me pass quickly.", 4.5));
+//        reviewList.add(new Review("Vernice Kah", "Amazing experience! The best!", 5.0));
+
+        // // RecyclerView setup and Set adapter
+        RecyclerView recyclerView = root.findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false));
+        CustomAdapter2 adapter = new CustomAdapter2(reviewerNames, reviewList);
+        recyclerView.setAdapter(adapter);
 
         return root;
     }

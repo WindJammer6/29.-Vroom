@@ -25,10 +25,14 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.vroomandroidapplicationv4.HomeActivity;
 import com.example.vroomandroidapplicationv4.R;
 import com.example.vroomandroidapplicationv4.databinding.FragmentSearchInstructorBinding;
+import com.example.vroomandroidapplicationv4.ui.search.datastructuresandalgorithms.heapsortalgorithm;
+import com.example.vroomandroidapplicationv4.ui.search.datastructuresandalgorithms.undirectedweightedgraphdatastructureanddijkstraalgorithm;
 import com.example.vroomandroidapplicationv4.ui.search.relatedtorecyclerview.CustomAdapter;
 import com.example.vroomandroidapplicationv4.ui.search.relatedtorecyclerview.Instructor;
+import com.example.vroomandroidapplicationv4.ui.search.relatedtorecyclerview.Review;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -53,6 +57,19 @@ public class SearchInstructorFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_search_instructor, container, false);
+
+        // Access the 'HomeActivity' parent activity and retrieve user data
+        HomeActivity activity = (HomeActivity) getActivity();
+        if (activity != null) {
+            String name = activity.getIntent().getStringExtra("name");
+            String address = activity.getIntent().getStringExtra("address");
+            ArrayList<HashMap<String, Object>> bookings =
+                    (ArrayList<HashMap<String, Object>>) activity.getIntent().getSerializableExtra("bookings");
+
+            Log.d("SearchInstructorFragment", "Name: " + name);
+            Log.d("SearchInstructorFragment", "Address: " + address);
+            Log.d("SearchInstructorFragment", "Bookings: " + bookings);
+        }
 
         // Retrieve the data from the Bundle
         Bundle bundle = getArguments();
@@ -97,7 +114,7 @@ public class SearchInstructorFragment extends Fragment {
         TextView instructorCountTextView = root.findViewById(R.id.textView3);
 
         // Read from the database and load data into the instructor list
-        myRef.child("Driving_Centers").addListenerForSingleValueEvent(new ValueEventListener() {
+        myRef.child("Instructors").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Log.d("FirebaseDatabase", "Database Dump: " + dataSnapshot.getValue());
@@ -113,26 +130,33 @@ public class SearchInstructorFragment extends Fragment {
                     String vehicleClass = instructorSnapshot.child("Vehicle Class").getValue(String.class);
                     String address = instructorSnapshot.child("Address").getValue(String.class);
                     String drivingCenter = instructorSnapshot.child("Driving Center").getValue(String.class);
+
+                    // 🔵 Deserialize Dates Unavailable
                     List<CalendarDay> datesUnavailable = new ArrayList<>();
                     DataSnapshot datesSnapshot = instructorSnapshot.child("Dates Unavailable");
                     if (datesSnapshot.exists()) {
-                        Log.d("FirebaseDatabase", "Processing unavailable dates for: " + name);
                         for (DataSnapshot dateEntry : datesSnapshot.getChildren()) {
                             Map<String, Long> dateMap = (Map<String, Long>) dateEntry.getValue();
                             if (dateMap != null && dateMap.containsKey("year") && dateMap.containsKey("month") && dateMap.containsKey("day")) {
                                 int year = dateMap.get("year").intValue();
                                 int month = dateMap.get("month").intValue();
                                 int day = dateMap.get("day").intValue();
-                                CalendarDay calendarDay = CalendarDay.from(year, month, day);
-                                datesUnavailable.add(CalendarDay.from(year, month - 1, day)); // Month is zero-based
-                                Log.d("FirebaseDatabase", "Added unavailable date: " + calendarDay);
+                                datesUnavailable.add(CalendarDay.from(year, month - 1, day));
                             }
                         }
-                    } else {
-                        Log.d("FirebaseDatabase", "No unavailable dates found for: " + name);
                     }
 
-//                    (List<CalendarDay>) instructorSnapshot.child("Dates Unavailable").getValue();
+                    // 🔵 Deserialize Reviews Map<String, Review>
+                    Map<String, Review> reviews = new HashMap<>();
+                    DataSnapshot reviewsSnapshot = instructorSnapshot.child("Reviews");
+                    if (reviewsSnapshot.exists()) {
+                        for (DataSnapshot reviewEntry : reviewsSnapshot.getChildren()) {
+                            String reviewerName = reviewEntry.getKey();
+                            double reviewerRating = reviewEntry.child("Rating").getValue(Double.class);
+                            String reviewerComment = reviewEntry.child("Review").getValue(String.class);
+                            reviews.put(reviewerName, new Review(reviewerRating, reviewerComment));
+                        }
+                    }
 
                     // Load only the first 30 characters of description
                     if (shortDescription != null && shortDescription.length() > 30) {
@@ -153,7 +177,7 @@ public class SearchInstructorFragment extends Fragment {
                     int profilePicResId = getResources().getIdentifier(profilePicName, "drawable", requireActivity().getPackageName());
 
                     // Create Instructor object and add to list
-                    Instructor instructor = new Instructor(name, shortDescription, fullDescription, price, rating, profilePicResId, vehicleClass, address, drivingCenter, datesUnavailable);
+                    Instructor instructor = new Instructor(name, shortDescription, fullDescription, price, rating, profilePicResId, vehicleClass, address, drivingCenter, datesUnavailable, reviews);
                     instructorList.add(instructor);
 
                     // 🔹 Sort Alphabetically by Name (Default Sorting)
@@ -250,6 +274,15 @@ public class SearchInstructorFragment extends Fragment {
             }
         });
 
+        // Set click listener for sorting by distance
+        Button btnSortByDistance = root.findViewById(R.id.btnFilters4);
+        btnSortByDistance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sortByDistance();
+            }
+        });
+
         return root;
     }
 
@@ -261,45 +294,60 @@ public class SearchInstructorFragment extends Fragment {
 
     public void sortByRating() {
         if (instructorList != null && !instructorList.isEmpty()) {
-            Collections.sort(instructorList, new Comparator<Instructor>() {
-                @Override
-                public int compare(Instructor o1, Instructor o2) {
-                    return Double.compare(o2.getRating(), o1.getRating()); // Descending order
-                }
-            });
+            heapsortalgorithm.heapSortByRating(instructorList);
             customAdapter.notifyDataSetChanged();
-            Log.d("SortAction", "Sorted by rating (High to Low)");
+            Log.d("SortAction", "Sorted by rating (High to Low) using HeapSort");
         }
     }
 
     public void sortByPriceIncreasing() {
         if (instructorList != null && !instructorList.isEmpty()) {
-            Collections.sort(instructorList, new Comparator<Instructor>() {
-                @Override
-                public int compare(Instructor o1, Instructor o2) {
-                    int price1 = Integer.parseInt(o1.getPrice().replaceAll("[^0-9]", ""));
-                    int price2 = Integer.parseInt(o2.getPrice().replaceAll("[^0-9]", ""));
-                    return Integer.compare(price1, price2); // Ascending order
-                }
-            });
+            heapsortalgorithm.heapSortByPrice(instructorList, false);
             customAdapter.notifyDataSetChanged();
-            Log.d("SortAction", "Sorted by price (Low to High)");
+            Log.d("SortAction", "Sorted by price (Low to High) using HeapSort");
         }
     }
 
-
     public void sortByPriceDecreasing() {
         if (instructorList != null && !instructorList.isEmpty()) {
+            heapsortalgorithm.heapSortByPrice(instructorList, true);
+            customAdapter.notifyDataSetChanged();
+            Log.d("SortAction", "Sorted by price (High to Low) using HeapSort");
+        }
+    }
+
+    public void sortByDistance() {
+        if (instructorList != null && !instructorList.isEmpty()) {
+            // Step 1: Get user location from HomeActivity
+            HomeActivity activity = (HomeActivity) getActivity();
+            if (activity == null) return;
+
+            String userLocation = activity.getIntent().getStringExtra("address");
+            if (userLocation == null) {
+                Log.d("SortByDistance", "User location is null.");
+                return;
+            }
+
+            // Step 2: Initialize graph and run Dijkstra
+            undirectedweightedgraphdatastructureanddijkstraalgorithm graph = new undirectedweightedgraphdatastructureanddijkstraalgorithm();
+            Map<String, Integer> distances = graph.dijkstra(userLocation);
+
+            // Step 3: Sort instructors based on distance
             Collections.sort(instructorList, new Comparator<Instructor>() {
                 @Override
-                public int compare(Instructor o1, Instructor o2) {
-                    int price1 = Integer.parseInt(o1.getPrice().replaceAll("[^0-9]", "")); // Extract price as integer
-                    int price2 = Integer.parseInt(o2.getPrice().replaceAll("[^0-9]", ""));
-                    return Integer.compare(price2, price1); // Descending order
+                public int compare(Instructor i1, Instructor i2) {
+                    Integer dist1 = distances.get(i1.getAddress());
+                    if (dist1 == null) dist1 = Integer.MAX_VALUE;
+
+                    Integer dist2 = distances.get(i2.getAddress());
+                    if (dist2 == null) dist2 = Integer.MAX_VALUE;
+                    return Integer.compare(dist1, dist2);
                 }
             });
+
+            // Step 4: Update UI
             customAdapter.notifyDataSetChanged();
-            Log.d("SortAction", "Sorted by price (High to Low)");
+            Log.d("SortAction", "Sorted by distance using Dijkstra");
         }
     }
 

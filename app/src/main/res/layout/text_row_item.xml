@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.489" />
 
     <Button
-        android:id="@+id/instructor_name"
+        android:id="@+id/reviewer_name"
         android:layout_width="220dp"
         android:layout_height="43dp"
         android:background="@android:color/transparent"
@@ -50,7 +50,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toEndOf="@+id/profile_image"
-        app:layout_constraintTop_toBottomOf="@+id/instructor_name" />
+        app:layout_constraintTop_toBottomOf="@+id/reviewer_name" />
 
     <TextView
         android:id="@+id/instructor_price"
@@ -84,7 +84,7 @@
         android:layout_marginStart="56dp"
         android:src="@drawable/rating_star_icon"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/instructor_name"
+        app:layout_constraintStart_toEndOf="@+id/reviewer_name"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.126" />
 

@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Write a message to the database
+        // Checking database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
 

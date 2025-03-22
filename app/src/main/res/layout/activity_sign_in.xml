@@ -38,119 +38,49 @@
         android:id="@+id/tvSubtitle8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="28dp"
-        android:text="+65   ▼"
+        android:layout_marginTop="12dp"
+        android:text="What is your address?"
         android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/ivCountryFlag"
-        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
-
-    <ImageView
-        android:id="@+id/ivCountryFlag"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="28dp"
-        android:contentDescription="Country Flag"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"
-        tools:srcCompat="@drawable/singapore_flag_logo" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
 
     <Button
         android:id="@+id/btnContinue"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#1250b5"
-        android:onClick="changeToHomeActivity"
-        android:text="Continue"
+        android:onClick="createAccount"
+        android:text="Create Account"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle8" />
-
-    <Button
-        android:id="@+id/btnFacebook"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="Continue with Facebook"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.437"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnGoogle"
-        app:strokeColor="#D3D3D3"
-        app:strokeWidth="1dp" />
-
-    <Button
-        android:id="@+id/btnGoogle2"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="44dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="Retrieve MyInfo with                       "
-        android:textColor="#000000"
-        android:textColorLink="#FCF5FD"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTerms"
-        app:strokeColor="#D3D3D3"
-        app:strokeWidth="1dp" />
-
-    <Button
-        android:id="@+id/btnGoogle"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="Continue with Google"
-        android:textColor="#000000"
-        android:textColorLink="#FCF5FD"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGoogle2"
-        app:strokeColor="#D3D3D3"
-        app:strokeWidth="1dp" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <TextView
         android:id="@+id/tvTerms"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="By proceeding from here, I agree to Vroom’s\nTerms of Use and Privacy Policy."
+        android:layout_width="322dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="8dp"
+        android:text="By proceeding from here, I agree to Vroom’s Terms of Use\nand Privacy Policy."
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnContinue" />
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="350dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="28dp"
-        android:background="#D3D3D3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTerms" />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="148dp"
         android:layout_height="48dp"
         android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="140dp"
         android:layout_marginEnd="28dp"
         android:backgroundTint="#FFFFFF"
         android:onClick="changeToLogInActivity"
@@ -159,7 +89,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.627"
         app:layout_constraintStart_toEndOf="@+id/btnRegister"
-        app:layout_constraintTop_toBottomOf="@+id/btnFacebook"
+        app:layout_constraintTop_toBottomOf="@+id/tvTerms"
         app:strokeColor="#D3D3D3"
         app:strokeWidth="1dp" />
 
@@ -196,64 +126,49 @@
         android:layout_height="48dp"
         android:layout_marginHorizontal="24dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="52dp"
-        android:backgroundTint="#FFFFFF"
+        android:layout_marginTop="140dp"
+        android:backgroundTint="#1250b5"
         android:onClick="changeToSignInActivity"
         android:text="Register"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFacebook"
+        app:layout_constraintTop_toBottomOf="@+id/tvTerms"
         app:strokeColor="#D3D3D3"
         app:strokeWidth="1dp" />
 
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="209dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="338dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Enter Mobile Number"
+        android:hint="Enter Name"
         android:textColor="#564141"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/tvSubtitle8"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toEndOf="@+id/btnFacebook"
-        app:layout_constraintHorizontal_bias="0.162"
-        app:layout_constraintStart_toStartOf="@+id/btnFacebook"
-        app:layout_constraintTop_toTopOf="@+id/btnFacebook"
-        app:srcCompat="@drawable/facebook_logo" />
+    <EditText
+        android:id="@+id/editTextText4"
+        android:layout_width="338dp"
+        android:layout_height="35dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Enter Password"
+        android:textColor="#564141"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/btnGoogle"
-        app:layout_constraintHorizontal_bias="0.162"
-        app:layout_constraintStart_toStartOf="@+id/btnGoogle"
-        app:layout_constraintTop_toBottomOf="@+id/btnGoogle2"
-        app:srcCompat="@drawable/google_logo" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="101dp"
-        android:layout_height="15dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/btnGoogle2"
-        app:layout_constraintHorizontal_bias="0.807"
-        app:layout_constraintStart_toStartOf="@+id/btnGoogle2"
-        app:layout_constraintTop_toTopOf="@+id/btnGoogle2"
-        app:srcCompat="@drawable/singpass_logo" />
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="336dp"
+        android:layout_height="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

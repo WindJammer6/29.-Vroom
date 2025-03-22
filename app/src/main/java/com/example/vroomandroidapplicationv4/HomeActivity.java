@@ -1,6 +1,7 @@
 package com.example.vroomandroidapplicationv4;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +17,9 @@ import com.example.vroomandroidapplicationv4.databinding.ActivityHomeBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.navigation.fragment.NavHostFragment;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -53,6 +57,16 @@ public class HomeActivity extends AppCompatActivity {
 
         // Hide the Title for All Fragments
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        // ✅ Retrieve and log incoming user data
+        String name = getIntent().getStringExtra("name");
+        String address = getIntent().getStringExtra("address");
+        ArrayList<HashMap<String, Object>> bookings =
+                (ArrayList<HashMap<String, Object>>) getIntent().getSerializableExtra("bookings");
+
+        Log.d("USER_DATA", "Name: " + name);
+        Log.d("USER_DATA", "Address: " + address);
+        Log.d("USER_DATA", "Bookings: " + bookings);
 
     }
 

@@ -65,7 +65,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         public ViewHolder(View itemView) {
             super(itemView);
             profileImage = itemView.findViewById(R.id.profile_image);
-            instructorName = itemView.findViewById(R.id.instructor_name);
+            instructorName = itemView.findViewById(R.id.reviewer_name);
             instructorShortDescription = itemView.findViewById(R.id.instructor_description);
             instructorPrice = itemView.findViewById(R.id.instructor_price);
             instructorRating = itemView.findViewById(R.id.instructor_rating);
@@ -79,11 +79,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         if (activity instanceof HomeActivity) {
             SearchProfileFragment fragment = new SearchProfileFragment();
 
-            // Log to check what is being passed
             Log.d("DEBUG", "Instructor Name: " + instructor.getName());
             Log.d("DEBUG", "Unavailable Dates: " + instructor.getDatesUnavailable());
 
-            // Create a Bundle to send instructor data
             Bundle bundle = new Bundle();
             bundle.putString("instructor_name", instructor.getName());
             bundle.putString("instructor_description", instructor.getFullDescription());
@@ -93,10 +91,26 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             bundle.putString("instructor_vehicle_class", instructor.getVehicleClass());
             bundle.putString("instructor_address", instructor.getAddress());
             bundle.putString("instructor_driving_center", instructor.getDrivingCenter());
-
             bundle.putParcelableArrayList("dates_unavailable", new ArrayList<>(instructor.getDatesUnavailable()));
 
-            fragment.setArguments(bundle); // Attach data
+            // 🔵 Handle reviews (convert to ArrayLists for Bundle)
+            ArrayList<String> reviewerNames = new ArrayList<>(instructor.getReviews().keySet());
+            ArrayList<Double> ratings = new ArrayList<>();
+            ArrayList<String> reviewTexts = new ArrayList<>();
+
+            for (String reviewer : reviewerNames) {
+                Review review = instructor.getReviews().get(reviewer);
+                if (review != null) {
+                    ratings.add(review.getRating());
+                    reviewTexts.add(review.getReview());
+                }
+            }
+
+            bundle.putStringArrayList("reviewer_names", reviewerNames);
+            bundle.putSerializable("ratings", ratings);
+            bundle.putStringArrayList("review_texts", reviewTexts);
+
+            fragment.setArguments(bundle);
 
             FragmentTransaction transaction = activity.getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.nav_host_fragment_activity_home, fragment);
@@ -104,5 +118,4 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             transaction.commit();
         }
     }
-
 }
