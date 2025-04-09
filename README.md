@@ -47,3 +47,31 @@ Sources:
 - https://www.youtube.com/watch?v=tZvjSl9dswg ('Android App Development in Java All-in-One Tutorial Series (4 HOURS!)' Youtube video by Caleb Curry) (For learning syntax basics of Android App Development in Java in Android Studio)
 - https://www.youtube.com/watch?v=aiX8bMPX_t8&t=230s ('How to connect Firebase to Android Studio App | 2024' Youtube video by Easy Tuto) (For learning how to connect Firebase to Android Studio IDE)
 
+<br>
+
+## How to push code from Android Studio to Github?
+1.
+```text
+git remote add origin https://github.com/lacro29/Vroom.git
+```
+
+2.
+```text
+git add .
+```
+
+3.
+```text
+git commit -am "[Commit message]"
+```
+
+4.
+```text
+git push origin master
+```
+
+OR
+
+```text
+git push origin master --forc
+```
