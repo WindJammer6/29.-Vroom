@@ -52,7 +52,7 @@ Sources:
 ## How to push code from Android Studio to Github?
 1.
 ```text
-git remote add origin https://github.com/lacro29/Vroom.git
+git remote add origin https://github.com/WindJammer6/Vroom.git
 ```
 
 2.
@@ -73,5 +73,5 @@ git push origin master
 OR
 
 ```text
-git push origin master --forc
+git push origin master --force
 ```
