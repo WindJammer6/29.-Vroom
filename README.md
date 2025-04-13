@@ -52,20 +52,25 @@ Sources:
 ## How to push code from Android Studio to Github?
 1.
 ```text
-git remote add origin https://github.com/WindJammer6/Vroom.git
+git init
 ```
 
 2.
 ```text
-git add .
+git remote add origin https://github.com/WindJammer6/Vroom.git
 ```
 
 3.
 ```text
-git commit -am "[Commit message]"
+git add .
 ```
 
 4.
+```text
+git commit -am "[Commit message]"
+```
+
+5.
 ```text
 git push origin master
 ```
