@@ -9,7 +9,9 @@ Vroom’s design follows core software engineering principles including Single R
 
 <br>
 
-*Some random information about the project:*
+*Some random information about the project:*  
+![Vroom_Cert](https://github.com/user-attachments/assets/93bdecec-785c-4196-bc48-ae20a3492fc9)
+
 
 ![image](https://github.com/user-attachments/assets/dfb76ef9-03ca-4427-83de-e715dd060431)
 
