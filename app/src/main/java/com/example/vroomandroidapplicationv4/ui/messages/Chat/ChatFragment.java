@@ -42,9 +42,6 @@ public class ChatFragment extends Fragment {
     private MessageAdapter messageAdapter;
     private String userName;
     private int userImage;
-    private static final int PERMISSION_REQUEST_CODE = 1001; // any specific integer used to get permission for notification
-
-    private static final String OPENAI_API_KEY = "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"; //OpenAI API key
 
     private EditText messageInput;
     private TextView chatUserName;
