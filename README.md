@@ -22,15 +22,23 @@ Hey, Vroom happened to win an award as one of the more popular Android Applicati
 ![Vroom_Cert](https://github.com/user-attachments/assets/93bdecec-785c-4196-bc48-ae20a3492fc9)
 
 
+Disclaimer:
+Vroom is a semi-working prototype, some features are not working completely such as the 'Edit Profile' feature and the 'Lesson Booking Calender' feature (once you make a booking, that booking does not get deleted and will remain available). The instructors in Vroom are not real people.
+
+<br>
+
+Programming Languages used:  
+![My Skills](https://go-skill-icons.vercel.app/api/icons?i=java) ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=python)
+
+Frameworks used:  
+![My Skills](https://go-skill-icons.vercel.app/api/icons?i=firebase) ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=openai) ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=figma) ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=canva)
+
 <br>
 
 ## Table of Contents:
 + Additional 
 + [Personal learning notes on Android App Development with Java during building Vroom](#personallearningnotes)
-+ [How to push code from Android Studio to Github?]()
-    1. [Sources and Context](#sourcesandcontext)
-    2. [Cleaning and Preparing Data](#cleaningandpreparingdata)
-
++ [How to push code from Android Studio to Github?](#pushcodefromandroidstudiotogithub)
 
 <br>
 
@@ -46,30 +54,25 @@ Android/iOS App development (not just with Java but can be for dart, swift, etc)
 - An important attribute that exists in all types of 'Views' is called the 'ID' attribute. Since in android app development we would often require to reference 'Views' so we can modify or work with it inside of code. And in order to do things dynamically like that, we often want to interact with these 'Views', which we can do so by stating their 'ID' attributes
 - A Fragment is a reusable UI component that represents a portion of a screen inside an Activity. Fragments allow for modular design, meaning you can break your UI into smaller, manageable pieces. Think of it like the 'Activity' → The container (full screen, while the 'Fragment' → A piece of that screen (like a section in a webpage)
 
+Source(s):
+- https://www.youtube.com/watch?v=tZvjSl9dswg (Caleb Curry) (Youtube video by Caleb Curry titled, 'Android App Development in Java All-in-One Tutorial Series (4 HOURS!)') (For learning syntax basics of Android App Development in Java in Android Studio)
+- https://www.youtube.com/watch?v=aiX8bMPX_t8&t=230s (Easy Tuto) (Youtube video by Easy Tuto titled, 'How to connect Firebase to Android Studio App | 2024') (For learning how to connect Firebase to Android Studio IDE)
+- https://stackoverflow.com/questions/76018702/i-cant-create-a-new-project-with-java-language-anymore-on-android-studio-flamin (StackOverflow) (helped me with debugging a bug)
+
 <br>
 
 Presentation slides to pitch the project idea:
 - https://www.canva.com/design/DAGe-dY8S3w/s84h1FwiLnhPeZOdrkp3uw/edit (Design by my groupmates not me, I am just the implementor)
 
 Figma link:
-- https://www.figma.com/design/rPCWeufByW9ThzQH79vdi2/Vroom?node-id=0-1&t=e2KqXYXxkes1UtQT-1 (Design by my groupmates not me, I am just the implementor)
+- https://www.figma.com/community/file/1498372745570465348 (Design by my groupmates not me, I am just the implementor)
 
 Firebase Realtime Database link:
 - https://console.firebase.google.com/u/0/project/vroom-android-application/database/vroom-android-application-default-rtdb/data/~2F (Firebase Realtime Database) (however its only accessible by me from my Gmail account)
 
-Website links that helped me with debugging various bugs:
-- https://stackoverflow.com/questions/76018702/i-cant-create-a-new-project-with-java-language-anymore-on-android-studio-flamin
-
-How upload code from Android Studio to Github with Git: 
-- https://www.youtube.com/watch?v=VJOblwM2KJ0&t=8s
-
-Sources:
-- https://www.youtube.com/watch?v=tZvjSl9dswg ('Android App Development in Java All-in-One Tutorial Series (4 HOURS!)' Youtube video by Caleb Curry) (For learning syntax basics of Android App Development in Java in Android Studio)
-- https://www.youtube.com/watch?v=aiX8bMPX_t8&t=230s ('How to connect Firebase to Android Studio App | 2024' Youtube video by Easy Tuto) (For learning how to connect Firebase to Android Studio IDE)
-
 <br>
 
-## How to push code from Android Studio to Github?
+## How to push code from Android Studio to Github? <a name = "pushcodefromandroidstudiotogithub"></a>
 Since I did Android Development with Java using the Android Studio IDE, I needed to learn how to push code with git on the terminal from Android Studio to Github. After much googling, this is what works for me.
 1.
 ```text
@@ -101,3 +104,6 @@ OR
 ```text
 git push origin master --force
 ```
+
+Source:
+- https://www.youtube.com/watch?v=VJOblwM2KJ0&t=8s (The Code City) (Youtube video by The Code City titled, 'How to Push Code to Github from Android Studio - Step by Step Guide (2023)')
