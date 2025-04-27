@@ -2,6 +2,8 @@
 <p align="center">
   <img src="https://github.com/user-attachments/assets/2ce1a2dd-d333-459f-8ddb-468f367d9c94" alt="Vroom" width="400"/>
 </p>
+
+**Short description of Vroom**:  
 Vroom is an android application developed in Java to help students in Singapore easily find and connect with reputable private driving instructors. Many learners prefer private instruction due to lower costs and flexible schedules, but they often struggle with fragmented platforms, potential scams, and unreliable booking systems. Vroom addresses these issues by offering a secure, centralized platform where students can search for instructors based on price, location, and availability.
 
 Key features include instructor discovery, booking lessons, scheduling, in-app chat, lesson reminders, and theory test quizzes. The app uses Firebase as its backend (NoSQL), storing user profiles, bookings, and chat histories efficiently. To simulate conversing with Singaporean driving instructors in the prototype, we used prompt engineering with OpenAI's GPT-3.5 Turbo Large Language Model (LLM) in the in-app chat feature. 
@@ -10,34 +12,33 @@ Advanced algorithms like Dijkstra’s algorithm are used to calculate the shorte
 
 Vroom’s design follows core software engineering principles including Single Responsibility and Composition Over Inheritance, ensuring modular, maintainable code. Vroom delivers a seamless experience that simplifies the learning journey and enhances communication between students and instructors.
 
-<br>
+**Personal reflection on building Vroom:**  
+Vroom is built as part of one of my university's module on Java and Android Development along with some of my classmates, [lacro29](https://github.com/lacro29), [marilynseet](https://github.com/marilynseet) and [brandonkimchi](https://github.com/brandonkimchi). I contributed as the main programmer, with some programming help, [Figma](www.figma.com) design, poster design and promotional video by my classmates. 
 
-Some random information about the project:  
+Hey, Vroom happened to win an award for most popular application during a design showcase of all the projects created as part of my university's module!
+  
 ![Vroom_Cert](https://github.com/user-attachments/assets/93bdecec-785c-4196-bc48-ae20a3492fc9)
 
 
-![image](https://github.com/user-attachments/assets/dfb76ef9-03ca-4427-83de-e715dd060431)
+<br>
 
+## Table of Contents:
++ Additional 
++ [Personal learning notes on Android App Development with Java during building Vroom](#personallearningnotes)
++ [How to push code from Android Studio to Github?]()
+    1. [Sources and Context](#sourcesandcontext)
+    2. [Cleaning and Preparing Data](#cleaningandpreparingdata)
 
-![WhatsApp Image 2025-03-18 at 02 45 17_e521aa0a](https://github.com/user-attachments/assets/4fc7b7f7-4dfb-4eb6-ad54-f6a65a056e10)
-
-
-Undirected Weighted Graph Data Structure is drawn based on eyeballing this Singapore with the towns and doing aggaration on the distances (weights), which we then applied Dijkstra's Algorithm. (rmb save a copy of this image in the repo somewhere)
-
-Bottom sketch is my draft interpretation of the Undirected Weighted Graph Data Structure.
-
-Distance ARE NOT ACCURATE! Its just to draft up a model to demonstrate the feature of distance sorting.
 
 <br>
 
-Random personal notes on Android App Development with Java:
+## Personal learning notes on Android App Development with Java during building Vroom <a name = "personallearningnotes"></a>
 Android/iOS App development (not just with Java but can be for dart, swift, etc) terminology:
 - Each button on the phone is called an app
 - Each page in these app is called an 'Activity'
 - the first page that opens when you click open an app is called the 'Main Activity' (you can think of it as the homepage of the app)
 - intent - the transfer of data from 1 activity/page of the app to another
 - Each component on the app (e.g. buttons, texts) is called a 'View'
-
 - An XML language file is like the HTML and CSS language with JavaScript for Android app development with Java. It describes the layout and design (front-end) of the android app pages/activity
 - Different 'Views' will have different attributes. (e.g. A text 'View' will have attributes like 'text' and 'clickable', while a button 'View' might have other types of attributes like 'onClick', and so does the other types of 'Views' will have all different types of attributes)
 - An important attribute that exists in all types of 'Views' is called the 'ID' attribute. Since in android app development we would often require to reference 'Views' so we can modify or work with it inside of code. And in order to do things dynamically like that, we often want to interact with these 'Views', which we can do so by stating their 'ID' attributes
@@ -67,41 +68,34 @@ Sources:
 <br>
 
 ## How to push code from Android Studio to Github?
+Since I did Android Development with Java using the Android Studio IDE, I needed to learn how to push code with git on the terminal from Android Studio to Github. After much googling, this is what works for me.
 1.
-text
+```text
 git init
-
+```
 
 2.
-text
+```text
 git remote add origin https://github.com/WindJammer6/Vroom.git
-
+```
 
 3.
-text
+```text
 git add .
-
+```
 
 4.
-text
+```text
 git commit -am "[Commit message]"
-
+```
 
 5.
-text
+```text
 git push origin master
-
+```
 
 OR
 
-text
+```text
 git push origin master --force
-
-
-<br>
-
-## About deployment
-At the end of this project I might consider publishing this app officially as a side hustle (Jetwei) Source on how this might be done: https://developer.android.com/studio/publish
-
-
-## About running the files locally and downloading from github
+```
