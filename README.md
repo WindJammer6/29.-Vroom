@@ -22,7 +22,7 @@ Hey, Vroom happened to win an award as one of the more popular Android Applicati
 ![Vroom_Cert](https://github.com/user-attachments/assets/93bdecec-785c-4196-bc48-ae20a3492fc9)
 
 
-Disclaimer:
+**Disclaimer:**
 Vroom is a semi-working prototype, some features are not working completely such as the 'Edit Profile' feature and the 'Lesson Booking Calender' feature (once you make a booking, that booking does not get deleted and will remain available). The instructors in Vroom are not real people.
 
 <br>
@@ -36,9 +36,21 @@ Frameworks used:
 <br>
 
 ## Table of Contents:
-+ Additional 
++ [Additional resources related to Vroom](#additionalresources)
 + [Personal learning notes on Android App Development with Java during building Vroom](#personallearningnotes)
 + [How to push code from Android Studio to Github?](#pushcodefromandroidstudiotogithub)
+
+<br>
+
+## Additional resources related to Vroom
+Presentation slides to pitch the project idea:
+- https://www.canva.com/design/DAGe-dY8S3w/s84h1FwiLnhPeZOdrkp3uw/edit (Design by my groupmates not me, I am just the implementor)
+
+Figma link:
+- https://www.figma.com/community/file/1498372745570465348 (Design by my groupmates not me, I am just the implementor)
+
+Firebase Realtime Database link:
+- https://console.firebase.google.com/u/0/project/vroom-android-application/database/vroom-android-application-default-rtdb/data/~2F (Firebase Realtime Database) (however its only accessible by me from my Gmail account)
 
 <br>
 
@@ -58,17 +70,6 @@ Source(s):
 - https://www.youtube.com/watch?v=tZvjSl9dswg (Caleb Curry) (Youtube video by Caleb Curry titled, 'Android App Development in Java All-in-One Tutorial Series (4 HOURS!)') (For learning syntax basics of Android App Development in Java in Android Studio)
 - https://www.youtube.com/watch?v=aiX8bMPX_t8&t=230s (Easy Tuto) (Youtube video by Easy Tuto titled, 'How to connect Firebase to Android Studio App | 2024') (For learning how to connect Firebase to Android Studio IDE)
 - https://stackoverflow.com/questions/76018702/i-cant-create-a-new-project-with-java-language-anymore-on-android-studio-flamin (StackOverflow) (helped me with debugging a bug)
-
-<br>
-
-Presentation slides to pitch the project idea:
-- https://www.canva.com/design/DAGe-dY8S3w/s84h1FwiLnhPeZOdrkp3uw/edit (Design by my groupmates not me, I am just the implementor)
-
-Figma link:
-- https://www.figma.com/community/file/1498372745570465348 (Design by my groupmates not me, I am just the implementor)
-
-Firebase Realtime Database link:
-- https://console.firebase.google.com/u/0/project/vroom-android-application/database/vroom-android-application-default-rtdb/data/~2F (Firebase Realtime Database) (however its only accessible by me from my Gmail account)
 
 <br>
 
