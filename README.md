@@ -75,6 +75,7 @@ Source(s):
 
 ## How to push code from Android Studio to Github? <a name = "pushcodefromandroidstudiotogithub"></a>
 Since I did Android Development with Java using the Android Studio IDE, I needed to learn how to push code with git on the terminal from Android Studio to Github. After much googling, this is what works for me.
+
 1.
 ```text
 git init
