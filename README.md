@@ -31,7 +31,7 @@ Programming Languages used:
 ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=java) ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=python)
 
 Frameworks used:  
-![My Skills](https://go-skill-icons.vercel.app/api/icons?i=firebase) ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=openai) ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=figma) ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=canva)
+![My Skills](https://go-skill-icons.vercel.app/api/icons?i=firebase) ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=chatgpt) ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=figma) ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=canva)
 
 <br>
 
