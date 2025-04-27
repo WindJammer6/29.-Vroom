@@ -47,7 +47,7 @@ Frameworks used:
 
 ## Additional resources related to Vroom
 
-Report, Presentation slides, Additional Python files and CSV files used during building Vroom: https://drive.google.com/drive/folders/180pvaDPHLwVBbXQcPiWR4SdEpYxlACJS?usp=sharing (Google Drive)
+Report, Presentation slides, Additional Python files and CSV files used during building Vroom: https://drive.google.com/drive/folders/180pvaDPHLwVBbXQcPiWR4SdEpYxlACJS?usp=sharing (Google Drive) (you can look at the report here to find out more details about Vroom)
 
 Vroom Figma Design link: https://www.figma.com/community/file/1498372745570465348 (Figma)
 
