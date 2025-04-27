@@ -35,7 +35,7 @@ Frameworks used:
 
 <br>
 
-## Table of Contents:
+## Table of Contents
 + [Additional resources related to Vroom](#additionalresources)
 + [Personal learning notes on Android App Development with Java during building Vroom](#personallearningnotes)
 + [How to push code from Android Studio to Github?](#pushcodefromandroidstudiotogithub)
