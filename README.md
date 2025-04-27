@@ -43,14 +43,12 @@ Frameworks used:
 <br>
 
 ## Additional resources related to Vroom
-Presentation slides to pitch the project idea:
-- https://www.canva.com/design/DAGe-dY8S3w/s84h1FwiLnhPeZOdrkp3uw/edit (Design by my groupmates not me, I am just the implementor)
 
-Figma link:
-- https://www.figma.com/community/file/1498372745570465348 (Design by my groupmates not me, I am just the implementor)
+Report, Presentation slides, Additional Python files and CSV files used during building Vroom: https://drive.google.com/drive/folders/180pvaDPHLwVBbXQcPiWR4SdEpYxlACJS?usp=sharing (Google Drive)
 
-Firebase Realtime Database link:
-- https://console.firebase.google.com/u/0/project/vroom-android-application/database/vroom-android-application-default-rtdb/data/~2F (Firebase Realtime Database) (however its only accessible by me from my Gmail account)
+Vroom Figma Design link: https://www.figma.com/community/file/1498372745570465348 (Figma)
+
+Firebase Realtime Database link: https://console.firebase.google.com/u/0/project/vroom-android-application/database/vroom-android-application-default-rtdb/data/~2F (Firebase Realtime Database) (however its only accessible by me from my Gmail account)
 
 <br>
 
