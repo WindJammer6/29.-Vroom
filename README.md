@@ -12,6 +12,8 @@ Advanced algorithms like Dijkstra’s algorithm are used to calculate the shorte
 
 Vroom’s design follows core software engineering principles including Single Responsibility and Composition Over Inheritance, ensuring modular, maintainable code. Vroom delivers a seamless experience that simplifies the learning journey and enhances communication between students and instructors.
 
+<br>
+
 **Personal reflection on building Vroom:**  
 Vroom is built as part of one of my university's module on Java and Android Development along with some of my classmates, [lacro29](https://github.com/lacro29), [marilynseet](https://github.com/marilynseet) and [brandonkimchi](https://github.com/brandonkimchi). I contributed as the main programmer, with some programming help, [Figma](www.figma.com) design, poster design and promotional video by my classmates. 
 
