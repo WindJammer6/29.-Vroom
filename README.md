@@ -14,7 +14,7 @@ Vroom’s design follows core software engineering principles including Single R
 
 <br>
 
-**Video Demonstration of Vroom**
+**Video Demonstration of Vroom:**
 
 
 **Personal reflection on building Vroom:**  
