@@ -54,7 +54,7 @@ Firebase Realtime Database link: https://console.firebase.google.com/u/0/project
 
 ## Personal learning notes on Android App Development with Java during building Vroom <a name = "personallearningnotes"></a>
 
-I followed the [Youtube video by Caleb Curry titled, 'Android App Development in Java All-in-One Tutorial Series (4 HOURS!)'](https://www.youtube.com/watch?v=tZvjSl9dswg) and the files of me following this tutorial is in my Google Drive folder mentioned in the previous section: https://drive.google.com/drive/folders/180pvaDPHLwVBbXQcPiWR4SdEpYxlACJS?usp=sharing.
+I followed the [Youtube video by Caleb Curry titled, 'Android App Development in Java All-in-One Tutorial Series (4 HOURS!)'](https://www.youtube.com/watch?v=tZvjSl9dswg) and the 'AndroidApplicationTutorial' folder stores the Android Application of me following this tutorial in my Google Drive folder mentioned in the previous section: https://drive.google.com/drive/folders/180pvaDPHLwVBbXQcPiWR4SdEpYxlACJS?usp=sharing.
 
 Android/iOS App development (not just with Java but can be for dart, swift, etc) terminology:
 - Each button on the phone is called an app
