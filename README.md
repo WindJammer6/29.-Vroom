@@ -44,7 +44,7 @@ Frameworks used:
 
 ## Additional resources related to Vroom
 
-Report, Presentation slides, Promotional video, Additional Python files and CSV files used during building Vroom: https://drive.google.com/drive/folders/180pvaDPHLwVBbXQcPiWR4SdEpYxlACJS?usp=sharing (Google Drive) (you can look at the report here or watch the promotional video to find out more details about Vroom)
+Past Vroom prototype versions, Report, Presentation slides, Promotional video, Additional Python files, CSV files used during building Vroom, and Android Application Development tutorial: https://drive.google.com/drive/folders/180pvaDPHLwVBbXQcPiWR4SdEpYxlACJS?usp=sharing (Google Drive) (you can look at the report here or watch the promotional video to find out more details about Vroom)
 
 Vroom Figma Design link: https://www.figma.com/community/file/1498372745570465348 (Figma)
 
@@ -53,6 +53,9 @@ Firebase Realtime Database link: https://console.firebase.google.com/u/0/project
 <br>
 
 ## Personal learning notes on Android App Development with Java during building Vroom <a name = "personallearningnotes"></a>
+
+I followed the [Youtube video by Caleb Curry titled, 'Android App Development in Java All-in-One Tutorial Series (4 HOURS!)'](https://www.youtube.com/watch?v=tZvjSl9dswg) and the files of me following this tutorial is in my Google Drive folder mentioned in the previous section: https://drive.google.com/drive/folders/180pvaDPHLwVBbXQcPiWR4SdEpYxlACJS?usp=sharing.
+
 Android/iOS App development (not just with Java but can be for dart, swift, etc) terminology:
 - Each button on the phone is called an app
 - Each page in these app is called an 'Activity'
