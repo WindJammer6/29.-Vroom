@@ -15,6 +15,10 @@ Vroom’s design follows core software engineering principles including Single R
 <br>
 
 **Personal reflection on building Vroom:**  
+<p align="center">
+  ![Screenshot 2025-05-02 024016](https://github.com/user-attachments/assets/f07ba25b-801f-4302-80aa-8ed6b9cf03da)
+
+</p>
 Vroom is built as part of one of my university's module on Java and Android Development along with some of my classmates, [lacro29](https://github.com/lacro29), [marilynseet](https://github.com/marilynseet) and [brandonkimchi](https://github.com/brandonkimchi). I contributed as the main programmer, with some programming help, [Figma](www.figma.com) design, poster design and promotional video by my classmates. 
 
 Hey, Vroom happened to win an award as one of the more popular Android Applications during a design showcase of all the projects created as part of my university's module!
