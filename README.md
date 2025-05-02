@@ -24,8 +24,10 @@ Hey, Vroom happened to win an award as one of the more popular Android Applicati
 ![Vroom_Cert](https://github.com/user-attachments/assets/93bdecec-785c-4196-bc48-ae20a3492fc9)
 
 
-**Disclaimer:**
-Vroom is a semi-working prototype, some features are not working completely such as the 'Edit Profile' feature and the 'Lesson Booking Calender' feature (once you make a booking, that booking does not get deleted and will remain available). The instructors in Vroom are not real people. The chatbot-like in-app chat feature that simulates conversing with Singaporean driving instructors in the prototype no longer works since we have stopped subscription to OpenAI API.
+**Disclaimers:**  
+- Vroom is a semi-working prototype, some features are not working completely such as the 'Edit Profile' feature and the 'Lesson Booking Calender' feature (once you make a booking, that booking does not get deleted and will remain available).
+- The instructors in Vroom are not real people.
+- The chatbot-like in-app chat feature that simulates conversing with Singaporean driving instructors in the prototype no longer works since we have stopped subscription to OpenAI API.
 
 <br>
 
