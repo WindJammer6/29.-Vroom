@@ -24,6 +24,11 @@ Hey, Vroom happened to win an award as one of the more popular Android Applicati
 ![Vroom_Cert](https://github.com/user-attachments/assets/93bdecec-785c-4196-bc48-ae20a3492fc9)
 
 
+In building this application, I utilised a Undirected Weighted Graph Data Structure that maps all the different towns in Singapore to apply Dijkstra’s algorithm on. Here is a hand-drawn visualisation of the Undirected Weighted Graph Data Structure that I made which helped with my code implementation:
+
+![WhatsApp Image 2025-03-18 at 02 45 19_c102e2cd](https://github.com/user-attachments/assets/a328845c-ce8e-4760-8ab3-b175dbfb445f)
+
+
 **Disclaimers:**  
 - Vroom is a semi-working prototype, some features are not working completely such as the 'Edit Profile' feature and the 'Lesson Booking Calender' feature (once you make a booking, that booking does not get deleted and will remain available).
 - The instructors in Vroom are not real people.
